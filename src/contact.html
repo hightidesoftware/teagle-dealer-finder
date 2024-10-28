@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Teagle Dealer Finder</title>
+    </head>
+    <body>
+        <div id="app">
+            <nav id="navbar">
+                <a href="/">Home</a>
+                <a class="active" href="/teagle-dealer-finder/contact.html">Contact</a>
+            </nav>
+
+            <h1>Teagle Enquiry Example</h1>
+
+            <form id="contact-form">
+                <div class="fields">
+                    <div class="field">
+                        <label for="first_name">First Name</label>
+                        <input class="control" type="text" id="firstName" name="first_name" />
+                    </div>
+
+                    <div class="field">
+                        <label for="last_name">Surname</label>
+                        <input class="control" type="text" id="secondName" name="last_name" />
+                    </div>
+                </div>
+
+                <div class="fields">
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input class="control" type="email" id="email" name="email" />
+                    </div>
+
+                    <div class="field">
+                        <label for="phone">Telephone</label>
+                        <input class="control" type="tel" id="phone" name="phone" />
+                    </div>
+                </div>
+
+                <div class="fields">
+                    <div class="field">
+                        <label for="reason_for_call_back">Reason for call back</label>
+                        <select class="control" id="reason_for_call_back" name="reason_for_call_back">
+                            <option disabled selected value>Select an option</option>
+                            <option value="sales-enquiry">Sales Enquiry</option>
+                            <option value="replacement-parts">Replacement Parts</option>
+                            <option value="service-support">Service Support</option>
+                            <option value="marketing-enquiry">Marketing Enquiry</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="preferred_contact_method">Preferred Contact Method</label>
+                        <select class="control" id="preferred_contact_method" name="preferred_contact_method">
+                            <option disabled selected value>Select an option</option>
+                            <option value="phone">Phone</option>
+                            <option value="email">Email</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="fields">
+                    <div class="field">
+                        <label for="country">Country</label>
+                        <select class="control" id="country" name="country">
+                            <option disabled selected value>Select an option</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="town">Town</label>
+                        <input class="control" id="town" name="town" />
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea class="control" id="message" name="message" rows="8"></textarea>
+                </div>
+
+                <div class="field">
+                    <div>
+                        <input type="radio" id="marketing-true" name="marketing_sign_up" value="true" />
+                        <label for="marketing-true"
+                            >Sign up to recieve relevant marketing including the latest product announcments and offers.
+                            You can unsubscribe at any time.</label
+                        >
+                    </div>
+                    <div>
+                        <input type="radio" id="marketing-false" name="marketing_sign_up" value="false" />
+                        <label for="marketing-false"
+                            >No thank, I would not like to receive any information from Teagle other than to process my
+                            immediate enquiry.</label
+                        >
+                    </div>
+                </div>
+
+                <button type="submit" class="control">Submit</button>
+
+                <div class="error-message"></div>
+            </form>
+
+            <div class="success-message" style="display: none">Submission successful</div>
+        </div>
+
+        <script type="module" src="/main.ts"></script>
+    </body>
+</html>
