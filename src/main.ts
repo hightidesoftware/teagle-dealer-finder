@@ -25,13 +25,14 @@ contactForm?.addEventListener('submit', (event) => {
     const formValues = Object.fromEntries(new FormData(contactForm));
 
     // TEMPORARY - Disable sending the emails whilst we test, save us from spamming Teagle with random test messages!
-    formValues.sendEmail = 'false';
+    formValues.send_email = 'false';
 
     // The request payload
     console.log(formValues);
 
     // POST to the connect endpoint
-    fetch('https://connect.teagle.co.uk/api/enquiries', {
+    // fetch('https://connect.teagle.co.uk/api/enquiries', {
+    fetch('http://localhost:7071/api/enquiries', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formValues),
