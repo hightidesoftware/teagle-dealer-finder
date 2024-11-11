@@ -31,8 +31,7 @@ contactForm?.addEventListener('submit', (event) => {
     console.log(formValues);
 
     // POST to the connect endpoint
-    // fetch('https://connect.teagle.co.uk/api/enquiries', {
-    fetch('http://localhost:7071/api/enquiries', {
+    fetch('https://connect.teagle.co.uk/api/enquiries', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formValues),
