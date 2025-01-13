@@ -10,7 +10,8 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 index: './src/index.html',
-                about: './src/contact.html',
+                contact: './src/contact.html',
+                contactIframe: './src/contact-iframe.html',
             },
         },
     },

@@ -1,6 +1,8 @@
 import { countries } from './countries';
 import './style.css';
 
+//* START CONTACT FORM PAGE */
+
 // Add country options to the select element
 const select = document.querySelector('#country');
 countries.forEach((country) => {
@@ -53,3 +55,36 @@ contactForm?.addEventListener('submit', (event) => {
             contactForm.inert = false;
         });
 });
+
+//* END CONTACT FORM PAGE */
+
+//* START CONTACT IFRAME PAGE */
+
+const contactUsButton: HTMLButtonElement | null = document.querySelector('#contact-us-button');
+
+contactUsButton?.addEventListener('click', () => {
+    const contactUsModal = document.createElement('div');
+    contactUsModal.innerHTML = `<div id="contact-us-modal" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Teagle Enquiry Form</h1>
+                </div>
+                <iframe
+                    id="teagle-enquiries-form"
+                    src="https://connect.teagle.co.uk/enquiries-form?source=teagle-embed-example"
+                    title="Teagle - Enquries Form"
+                ></iframe>
+            </div>
+        </div>`;
+
+    // Close modal on background click
+    const modalBackground = contactUsModal.querySelector('.modal-background');
+    modalBackground?.addEventListener('click', () => {
+        contactUsModal.remove();
+    });
+
+    document.body.appendChild(contactUsModal);
+});
+
+//* END CONTACT IFRAME PAGE */
